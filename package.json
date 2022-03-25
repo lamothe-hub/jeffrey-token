@@ -1,0 +1,28 @@
+{
+  "name": "jeffrey-token",
+  "version": "1.0.0",
+  "description": "A project for releasing and managing a token on Ethereum mainnet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamothe-hub/jeffrey-token.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lamothe-hub/jeffrey-token/issues"
+  },
+  "homepage": "https://github.com/lamothe-hub/jeffrey-token#readme",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.5.0"
+  },
+  "dependencies": {
+    "truffle": "^5.5.5", 
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1"
+  }
+}
