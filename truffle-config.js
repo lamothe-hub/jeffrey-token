@@ -1,4 +1,11 @@
-
+// const getEnv = env => {
+//   const value = process.env[env];
+//   if (typeof value === 'undefined') {
+//     throw new Error(`${env} has not been set.`);
+//   }
+//   return value;
+// };
+// const mnemonic = getEnv('ETH_WALLET_MNEMONIC');
 
 module.exports = {
 
