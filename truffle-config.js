@@ -1,11 +1,13 @@
-// const getEnv = env => {
-//   const value = process.env[env];
-//   if (typeof value === 'undefined') {
-//     throw new Error(`${env} has not been set.`);
-//   }
-//   return value;
-// };
-// const mnemonic = getEnv('ETH_WALLET_MNEMONIC');
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+
+const getEnv = env => {
+  const value = process.env[env];
+  if (typeof value === 'undefined') {
+    throw new Error(`${env} has not been set.`);
+  }
+  return value;
+};
+const mnemonic = getEnv('ETH_WALLET_MNEMONIC');
 
 module.exports = {
 
@@ -21,6 +23,14 @@ module.exports = {
      port: 7545,            // Standard Ethereum port (default: none)
      network_id: "*",       // Any network (default: none)
     },
+
+    ropsten: {
+      provider: function() {
+        return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/cfe8867627354617add9625c3bce7998")
+      },
+      network_id: 3
+    }
+    
     // Another network with more advanced options...
     // advanced: {
     // port: 8777,             // Custom port
